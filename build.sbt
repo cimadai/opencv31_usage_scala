@@ -11,7 +11,10 @@ scalacOptions ++= Seq(
 
 javaOptions in run += "-Djava.library.path=./lib"
 
-lazy val root = (project in file("."))
+libraryDependencies += "org.scala-lang" % "scala-swing" % "2.11.0-M7"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.4.1"
+
+lazy val root = project in file(".")
 
 fork := true
 
